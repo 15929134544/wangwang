@@ -1,0 +1,17 @@
+类中的方法：
+普通方法：
+    def func(self):
+        pass
+类方法：
+    @classmethod
+    def func(cls):
+        pass
+静态方法：
+    @staticmethod
+    def func():
+        pass
+魔术方法:
+__init__  __str__
+
+__new__  __del__  __call__
+

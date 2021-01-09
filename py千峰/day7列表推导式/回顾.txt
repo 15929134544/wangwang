@@ -1,0 +1,59 @@
+文件操作：
+os模块：
+os模块
+import os
+    os.path:
+        dirname()
+        join()
+        split()
+        splitext()
+        getsize()
+
+        isabs()
+        isdir()
+        isflie()
+    os:
+        getcwd()
+        chdir()
+        listdir()
+        mkdir()
+        rmdir()
+        remove()
+        ...
+
+    open()和open()通常结合起来使用
+
+
+异常：
+    语法错误:报红色波浪线
+    异常：运行时会报出来的错误
+
+    系统抛出异常
+
+    list1 = []
+
+    list1.pop()
+
+    处理异常：
+        格式：
+            try:
+                可能发生异常的代码
+            except：
+                有异常才会进入的代码
+            [except 异常类型 as err:
+                ...]
+
+            [else:
+                没有异常才会进入的代码部分]
+
+            [
+            finally:
+                无论有无异常，都会执行的代码
+            ]
+
+注意：如果有else，在try里面不能使用return
+
+
+抛出异常：手动异常 raise
+    格式：
+        raise 异常类型('提示信息')

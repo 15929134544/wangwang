@@ -1,0 +1,61 @@
+回顾：
+单例：__new__
+面试题：实现单例的方式有几种？（上网查）
+class Singleton:
+    __instance = None
+
+    def __new__(cls ):
+        if cls.__isinstance is None:
+            cls.__instance = object.__new__(cls)
+            return cls.__instance
+
+        else:
+            return cls.__instance
+
+扩展：元类   装饰器...
+
+模块：
+1、自定义模块：
+xxx.py就是一个模块
+
+模块的导入：
+(1)：import xxx
+(2):from xxx import xxx
+(3):from xxx import *   + __all__ = []
+
+__name__ == '__main__'的使用：在自己的模块里就是__main__，别的模块使用就是模块名
+
+
+包：
+    user
+        |--__init__.py  只要有包的导入，都会默认执行__init__.py文件 __all__ = [] + import 包名 import *
+        |--xx.py
+            |--add
+        |--...
+
+    article
+        |--aa.py
+
+    bb.py
+
+    如果想使用模块里面的内容：
+        from user(包名).xx import add
+        add()
+
+
+ 循环导入：避免
+ 1、重构代码
+ 2、将导入语句放入函数中（提倡）
+ 3、将导入语句放到模块最后
+
+
+2、系统模块：
+
+    sys:    sys.path    sys.version     sys.argv
+
+    time与datetime:
+        
+
+    random:
+
+3、第三方的包：

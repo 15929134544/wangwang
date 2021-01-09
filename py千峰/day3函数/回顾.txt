@@ -1,0 +1,153 @@
+函数：
+作用域：LEGB
+
+L:Local 本地（局部作用域）
+E：enclosing    嵌套
+G：global    全局
+B:built——in 内置的
+按照此顺序寻找，如果都没有找到，就会报错
+搜索的规则：从里往外
+
+
+嵌套函数：
+内层函数和外层函数，以及将内层函数返出来，能够被外界所调用
+
+
+闭包：对闭包来说，内层函数往往会引用外部的变量
+条件：
+1、有内层函数
+2、内层函数引用外层的变量
+3、返出内层函数
+
+装饰器：
+是在闭包基础上完成的
+1、有内层函数
+2、内层函数引用外层的变量
+3、返出内层函数
+4、被装饰函数作为外层函数的参数
+
+万能的装饰器：参数是可变参数（*args, **kwargs）
+
+使用装饰器：
+@装饰器名字
+def 函数名（）：
+
+
+装饰器可以有参数，就是三层的装饰器
+可以有多层装饰器，装饰的时候先装饰最近的
+
+
+# 总结函数：
+普通函数：
+def 函数名（[参数，...]）：
+                函数体
+
+1、如何定义函数
+2、如何调用函数
+
+
+参数：
+1、无参数：
+def func():
+    pass
+
+2、有参数：
+一般参数：
+def func(a,b)：
+    pass
+
+调用：func（1， 2）
+
+可变参数：
+def func(*args, **kwargs):  # args是单个元素     kwargs关键字参数
+    pass
+
+func()
+func(1)
+func(a = 10)
+
+默认值：
+def func(a = 10，b = 10):
+    pass
+
+func()
+func(100)
+
+关键字参数：
+func（b = 99）
+
+
+返回值：return
+没有返回值：none
+有返回值：
+def func():
+    return 'a','b'
+
+x= func()
+print(x)------x = ('a', 'b')
+
+
+嵌套函数：--------》闭包（把嵌套的函数扔出来）-------》装饰器（传一个函数作为参数）
+def func():
+    def wrapper():
+        ...
+    return wrapper
+
+
+变量的作用域：LEGB
+
+L:Local 本地（局部作用域）
+E：enclosing    嵌套
+G：global    全局
+B:built——in 内置的
+按照此顺序寻找，如果都没有找到，就会报错
+搜索的规则：从里往外
+
+修改全局变量和局部变量会用到的关键字
+global   nonlocal
+
+两个内置函数，用来查看变量有哪些
+globals()：查看全局
+locals():查看本地
+
+
+装饰器：
+
+单层装饰器：
+
+def decorate(func):
+    def wrapper(*args, **kwargs):
+       ...
+    return wrapper
+
+@decorate
+def house():
+    pass
+
+
+多层装饰器
+特点：先装离得近的
+@zhang1
+@zhuang2
+def house():
+    pass
+
+
+装饰器带参数：
+def outter():
+    def decorate(func):
+        def wrapper(*args, **kwargs):
+           ...
+        return wrapper
+    return decorate
+
+
+@zhuang(10)
+def house():    # 房子铺了10块地砖
+    pass
+
+
+匿名函数：lambda 参数：返回值
+
+递归函数：自己调用自己
+要有入口和出口

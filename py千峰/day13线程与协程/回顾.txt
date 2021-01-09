@@ -1,0 +1,64 @@
+进程，线程：
+
+进程：
+Process类
+    1、创建进程：
+    def func(n):
+        pass
+    p = Process(target=func, name='', args=(1, ), kwargs='')
+
+    2、进程开始:p.start()用来启动进程【不能使用mp.run()，因为run只是执行动作，并不能启动进程】
+
+自定义进程：
+    class MyProcess(Process):
+        重写run方法
+        def run(self):
+            pass
+
+
+    创建进程:p = MyProcess()
+    启动进程：p.start()
+
+
+进程数据共享：
+    多进程对于全局变量访问，在每一个全局变量里面都放一个全局变量
+    保证每个进程访问变量之间互不干扰
+    m = 1   # 不可变类型
+    list1 = []  # 可变类型
+
+
+进程池：Pool可以放多个进程
+导入：from multiprocessing import Pool
+
+p = Pool(5)
+
+使用时分为两种类型：
+    阻塞式：apply(func, args, kwargs)
+    非阻塞式：apply_async(func, args, kwargs, callback=函数)
+
+    callback=函数：资源的容器
+
+
+进程间通信：通过Queue（队列）完成
+q = Queue(4)
+
+q.put()
+q.get()
+q.qsize()
+q.empty()
+q.full()
+
+
+线程：
+
+    线程和进程的区别：包含关系，进程里面可以存在多个线程，多个线程共用进程的资源。
+
+创建线程：t = Thread(target=func, name='', args=(1, ), kwargs='')
+
+启动线程：t.start()
+
+GIL:全局解释器锁，保证数据的安全性，但是任务速度变慢
+所以快速计算型操作用进程完成，而对于耗时操作使用线程完成
+python的线程叫伪线程
+
+线程同步：

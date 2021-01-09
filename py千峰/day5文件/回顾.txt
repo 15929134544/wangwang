@@ -1,0 +1,115 @@
+当函数比较简单，可以用一两句话来写的时候，就没有必要来声明一个函数，
+用lambda带代替就可以
+
+匿名函数：lambda 参数，参数... ：返回值结果
+
+相当于：
+def func(参数1，参数2...):
+    函数体
+
+    return 值
+
+lambda x, y: x + y
+
+和lambda结合使用的函数：
+涉及到关键字key-------> 匿名函数：
+max():
+min():
+sorted():
+
+map(func, list):
+filter(func, list):返回值是布尔类型
+reduce():------->function form import redunce   函数必须是有两个参数
+
+递归函数：
+自己调用自己
+要有入口和出口
+
+
+文件操作：
+
+open（path，mode）
+
+mode------->r
+s.read()
+s.readline()
+s.readlines()
+s.readable()
+
+mode------->w, a
+write()
+writelines()    没有换行功能
+writeable()
+
+
+对于读，文件不存在会报错
+对于写，文件不存在会自动新建
+
+
+os模块：
+os.path
+
+absolute    绝对的
+绝对路径：D:\pythonhello\py千峰\day4文件操作\aa.txt
+
+相对路径:当前文件作为参照点,同级别的直接写关系即可，不同级别要退回上级，用../表示
+返回当前文件的上一级，有几个就用几个../
+
+
+文件：
+文件操作：
+    open（）
+    第一个参数：
+    path/filename：
+        path：
+            绝对路径：完整的，带盘符的路径
+            相对路径：相对当前文件的路径，返回上层目录用../
+
+    mode:操作模式
+    读操作：rb
+
+    写操作：wb
+
+注意：使用open的时候，得到的流都要关闭
+    stream = open(file, mode)
+    stream.read()
+    stream.write()
+    stream.close()
+
+    简便方式：
+    with open(file, mode) as stream:
+        pass
+
+
+    os模块：
+
+        (1)os.path常用函数：
+            dirname():获取当前文件所在文件夹的路径 = os.getcwd()
+            path = os.path.dirname(__file__)
+            join():拼接获取新路径
+            split():分割（得到文件目录，文件名）
+                path = r'D:\pythonhello\py千峰\day5文件\file01.py'
+                result = os.path.split(path)
+                print(result[1])  # 文件名
+                # ('D:\\pythonhello\\py千峰\\day5文件', 'file01.py')
+                # filename = path[path.rfind('\\')+1:]
+            splitext():分割（文件目录/文件名， 文件扩展名）
+                # 文件的扩展名（文件类型）
+                # 分割文件与扩展名
+                result = os.path.splitext(path)
+                print(result)  # ('D:\\pythonhello\\py千峰\\day5文件\\file01', '.py')
+            getsize():获取文件大小
+
+            isabs()：判断是否是绝对路径
+            isfile():判断是否是文件
+            isdir():判断是否是文件
+
+
+        (2)os常用函数：
+            os模块下的方法：
+            os.getcwd():获取当前文件所在文件夹的路径
+            os.listdir():返回指定目录下所有文件和文件夹的名称
+            os.mkdir():创建文件夹
+            os.rmdir():删除空的文件夹
+            os.remove():删除文件
+            os.chdir()：切换目录
