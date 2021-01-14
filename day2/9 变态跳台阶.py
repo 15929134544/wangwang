@@ -9,5 +9,6 @@ class Solution:
         # write code here
         res = [1, 2]
         while len(res) < number:
+            # ** 表示次方
             res.append(2**(number-1))
         return res[number-1]
