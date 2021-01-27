@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .c1{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+        }
+        .bg_green{
+            background-color: greenyellow;
+        }
+        .bg_red{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1" class="c1 bg_red bg_green"></div>
+    <button id="d2">变色</button>
+    <script>
+        let btnEle = document.getElementById('d2')
+        let divEle = document.getElementById('d1')
+        btnEle.onclick = function (){ //绑定点击事件
+            // 动态修改div标签的类属性
+            divEle.classList.toggle('bg_red')
+        }
+    </script>
+</body>
+</html>

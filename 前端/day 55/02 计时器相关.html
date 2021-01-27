@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function func1(){
+        alert(123)
+    }
+    let t = setTimeout(func1,3000)  // 毫秒为单位 3秒之后自动执行func1函数
+
+    clearTimeout(t)  // 取消定时任务 如果你需要清除定时任务，需要提前用变量指代定时任务
+
+
+    function func2(){
+        alert(123)
+    }
+    function show(){
+         let t = setInterval(func2,3000) // 每隔3秒执行一次
+        function inner(){
+            clearInterval(t) // 清除定时器
+        }
+        setTimeout(inner,9000) // 9秒之后触发
+    }
+    show()
+
+
+
+</script>
+</body>
+</html>

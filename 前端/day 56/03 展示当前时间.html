@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="d1" style="display: block;height: 50px;width: 200px">
+<button id="d2">开始</button>
+<button id="d3">结束</button>
+
+<script>
+    // 先定义一个全局存储定时器的变量
+    let t = null
+    let inEle = document.getElementById('d1')
+    let startBtnEle = document.getElementById('d2')
+    let endButEle = document.getElementById('d3')
+    // 1、访问页面之后 将访问的时间展示到input框中
+    // 2、动态展示当前时间
+    // 3、页面上加两个按钮 一个开始 一个结束
+    function showTime(){
+        let currentTime = new Date();
+        inEle.value = currentTime.toLocaleString()
+
+    }
+    startBtnEle.onclick = function (){
+        // 限制定时器只能开一个
+        if (!t){
+            t = setInterval(showTime,1000) // 每点击一次就会开设一个定时器，而t只指代最后一个
+        }
+
+    }
+    endButEle.onclick = function (){
+        clearInterval(t)
+        // 清除定时器的同时还应该将t重置为空
+        t = null
+    }
+
+</script>
+</body>
+</html>

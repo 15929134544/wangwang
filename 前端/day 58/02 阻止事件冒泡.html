@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="d1">div
+        <p id="d2">div>p
+            <span id="d3">span</span>
+        </p>
+    </div>
+
+    <script>
+        $('#d1').click(function (){
+            alert('div')
+        })
+        $('#d2').click(function (){
+            alert('div>p')
+        })
+        $('#d3').click(function (event){
+            alert('div>p>span')
+            // 阻止事件冒泡的方式1
+            // return false
+            // 阻止事件冒泡的方式2
+            // event.stopPropagation()
+        })
+
+    </script>
+</body>
+</html>

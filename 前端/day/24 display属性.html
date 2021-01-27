@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*#d1{*/
+        /*    !*display: none; !*隐藏标签不展示在前端页面并且原来的位置也不再占有了，*!*/
+        /*    !*但是还存在于文档上*!*!*/
+
+        /*    display: inline; !*将标签设置为行内标签的特点：一行显示并且没法修改长宽*!*/
+        /*}*/
+
+        /*#d2{*/
+        /*    display: inline;*/
+        /*}*/
+
+        /*#d1{*/
+        /*    display: block; !*将标签设置成块级标签的特点*!*/
+        /*}*/
+        /*#d2{*/
+        /*    display: block;*/
+        /*}*/
+
+        /*#d1{*/
+        /*    display: inline-block;*/
+        /*}*/
+
+        /*#d2{*/
+        /*    display: inline-block; !*让标签既可以在一行显示，又可以实现设置长宽*!*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div style="display: none">div1</div>
+<div>div2</div>
+<div style="visibility: hidden">div3</div> /*单纯的隐藏，位置还在*/
+<div>div4</div>
+<!--<div id="d1" style="height: 100px; width: 100px; background-color: red" >01</div>-->
+<!--<div id="d2" style="height: 100px; width: 100px; background-color: greenyellow">02</div>-->
+<!--<span id="d1" style="height: 100px; width: 100px; background-color: red"></span>-->
+<!--<span id="d2" style="height: 100px; width: 100px; background-color: yellow"></span>-->
+
+</body>
+</html>

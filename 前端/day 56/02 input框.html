@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" value="老板 去吗？" id="d1">
+
+<script>
+    let iEle = document.getElementById('d1')
+    // 获取焦点事件
+    iEle.onfocus = function (){
+        // 将input内部的文本去除
+        iEle.value = ''
+        // 点value就是获取 ，等号赋值就是设置
+    }
+    // 失去焦点事件
+    iEle.onblur = function (){
+        // 给input标签重新赋值
+        iEle.value = '没钱 不去'
+    }
+</script>
+</body>
+</html>

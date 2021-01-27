@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="http://127.0.0.1:5000/index/" method="post" enctype="multipart/form-data">
+        <h1>注册页面</h1>
+            <p>
+                <label for="d1">
+                    username:<input type="text" id="d1" name="username" value="默认值">
+                </label>
+            </p>
+            <p>
+               <label for="d2">password: </label>
+               <input type="password" id="d2" name="password">
+            </p>
+            <p>birthday：
+                <input type="date">
+            </p>
+            <p>gender:
+                <input type="radio" name="gender" checked="checked">男
+                <input type="radio" name="gender">女
+                <input type="radio" name="gender">其他
+            </p>
+            <p>hobby:
+                <input type="checkbox">read
+                <input type="checkbox" checked>dbj
+                <input type="checkbox">jdb
+                <input type="checkbox">hecha
+            </p>
+            <p>province:
+                <select name="" id="">
+                    <option value="">上海</option>
+                    <option value="" selected>北京</option>
+                    <option value="">深圳</option>
+                </select>
+            </p>
+    <!--        <p>exgirlfriend-->
+    <!--            <select name="" id="" multiple>-->
+    <!--                <option value="" selected>新垣结衣</option>-->
+    <!--                <option value="">斯嘉丽</option>-->
+    <!--                <option value="">明老师</option>-->
+    <!--            </select>-->
+    <!--        </p>-->
+            <p>province1
+                <select name="" id="">
+                    <optgroup label="上海">
+                        <option value="">浦东新区</option>
+                        <option value="">黄浦</option>
+                        <option value="">青浦</option>
+                    </optgroup>
+                    <optgroup label="北京"></optgroup>
+                    <optgroup label="深圳"></optgroup>
+                </select>
+            </p>
+
+            <p>个人简介：
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </p>
+    <!--        当你没有指定按钮的文本内容，不同的浏览器打开之后可能渲染的文本内容不一致-->
+            <input type="submit" value="注册">
+            <input type="button" value="按钮">
+            <input type="reset" value="重置">
+            <button>点我</button>
+    </form>
+</body>
+</html>

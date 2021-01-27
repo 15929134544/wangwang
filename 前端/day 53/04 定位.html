@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #d1{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            left: 50px; /*从左往右 如果是负数，方向则相反*/
+            top: 50px; /*从上往下 如果是负数，方向则相反*/
+            /*position: static; !*默认是static，无法修改位置*!*/
+            position: relative;
+            /*相对定位 标签由static变为relative他的
+            性质就从原来的没有定位的标签变成了已经定位过的标签
+            虽然你哪怕没有动，但是你的性质也已经改变了
+            */
+        }
+        #d2{
+            height: 100px;
+            width: 200px;
+            background-color: red;
+            position: relative; /*已经定位过了*/
+        }
+        #d3{
+            height: 200px;
+            width: 400px;
+            background-color: orange;
+            position: absolute;
+            left: 200px;
+            top: 100px;
+        }
+        #d4{
+            position: fixed; /*写了fixed之后，接下来的定位就是依据于浏览器窗口*/
+            bottom: 10px;
+            right: 20px;
+            height: 50px;
+            width: 100px;
+            background-color: white;
+            border: 3px solid blue;
+        }
+    </style>
+</head>
+<body>
+<!--    <div id="d1"></div>-->
+<!--<div id="d2">defgrhtjyhtgrefdfgrt /*优先展示文本内容*/-->
+<!--    <div id="d3"></div>-->
+<!--</div>-->
+
+<div style="height: 500px; background-color: red"></div>
+<div style="height: 500px; background-color: greenyellow"></div>
+<div style="height: 500px; background-color: blue"></div>
+<div id="d4">回到顶部</div>
+</body>
+</html>

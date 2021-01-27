@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a:link{ /*访问之前的状态：没有被点击时候的状态*/
+            color: red;
+        }
+        a:hover{ /*需要记住*/
+            color: aqua;/*鼠标悬浮态*/
+        }
+        a:active{
+            color: black;/*激活态（鼠标点击不松开的状态）*/
+        }
+        a:visited{
+            color: darkgray;/*访问之后的状态*/
+        }
+        input:focus{ /*input框获取焦点（鼠标点击input框）*/
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<a href="https://www.jd.com">不知道</a>
+<input type="text">
+</body>
+</html>

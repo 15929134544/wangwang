@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<p>username
+    <input type="text"id="username">
+    <span style="color: red"></span>
+</p>
+<p>password
+    <input type="text" id="password">
+    <span style="color: red"></span>
+</p>
+<button id="d1">提交</button>
+<script>
+    let $userName = $('#username')
+    let $passWord = $('#password')
+    $('#d1').click(function (){
+        // 获取用户输入的用户名和密码 做校验
+        let userName = $userName.val()
+        let passWord = $passWord.val()
+        if(!userName){
+            $userName.next().text('用户名不能为空')
+        }
+        if(!passWord){
+            $passWord.next().text('密码不能为空')
+        }
+
+    })
+    $('input').focus(function (){
+        $(this).next().text('')
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .left{
+            float: left;
+            background-color: darkgray;
+            width: 20%;
+            height: 100%;
+            position: fixed;
+        }
+        .title{
+            font-size: 36px;
+            color: white;
+            text-align: center;
+        }
+        .items{
+            border: 2px solid black;
+
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <div class="menu">
+            <div class="title">菜单一
+                <div class="items">111</div>
+                <div class="items">222</div>
+                <div class="items">333</div>
+            </div>
+             <div class="title">菜单二
+                <div class="items">111</div>
+                <div class="items">222</div>
+                <div class="items">333</div>
+            </div>
+             <div class="title">菜单三
+                <div class="items">111</div>
+                <div class="items">222</div>
+                <div class="items">333</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.title').click(function (){
+            // 先给所有的items加hide
+             $('.items').addClass('hide')
+            // 然后将被di点击的标签内部hide移除
+            $(this).children().removeClass('hide')
+        })
+    </script>
+</body>
+</html>

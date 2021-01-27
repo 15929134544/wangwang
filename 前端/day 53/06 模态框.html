@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:username="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .cover{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 99;
+        }
+        .modal{
+            background-color: white;
+            height: 200px;
+            width: 400px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            z-index: 100;
+            margin-left: -200px;
+            margin-top: -100px;
+        }
+
+    </style>
+</head>
+<body>
+<div>这是最底层的页面内容</div>
+<div class="cover"></div>
+<div class="modal">
+    <h1>注册页面</h1>
+    <p>username:<input type="text"></p>
+    <p>password:<input type="text"></p>
+    <button>点我点我~</button>
+</div>
+</body>
+</html>

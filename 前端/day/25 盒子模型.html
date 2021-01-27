@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            /*margin: 0; !*上下左右全是0*!*/
+            /*margin: 10px 20px; !*第一个是上下，第二个是左右*!*/
+            /*margin: 10px 20px 30px; !*第一个是上 第二个左右 第三个下*!*/
+            margin: 10px 20px 30px 40px; /*上 右 下 左*/
+        }
+        p{
+            /*margin-left: 0;*/
+            /*margin-bottom: 0;*/
+            /*margin-right: 0;*/
+            /*margin-top: 0;*/
+        }
+
+        /*#d1{*/
+        /*    margin-bottom: 20px;*/
+        /*}*/
+        /*#d2{*/
+        /*    margin-top: 50px; !*不叠加 只取大的*!*/
+        /*}*/
+        #dd{
+            margin: 0 auto; /*只能做到标签的水平居中能够，不能做到竖直居中*/
+        }
+        p{
+            border: 3px solid red;
+            /*padding-left: 10px;*/ /*上下左右*/
+            /*padding: 10px 20px;*/
+            /*padding: 10px 20px 30px;*/
+            /*padding: 10px 20px 30px 40px;*/ /*规律和margin一样*/
+        }
+    </style>
+</head>
+<body>
+<!--    <p style="border: 1px solid red;" id="d1">ppp</p>-->
+<!--    <p style="border: 1px solid orange;" id="d2">ppp</p>-->
+
+<!--<div style="border: 3px solid red; height: 400px; width: 400px">-->
+<!--    <div id="dd" style="border: 1px solid orange; height: 50px; width: 50px; background-color: blue;"></div>-->
+<!--</div>-->
+<p>ppp</p>
+</body>
+</html>
